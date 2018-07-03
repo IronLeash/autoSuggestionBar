@@ -10,16 +10,40 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet fileprivate var textfield: UITextField!
+    @IBOutlet fileprivate var collectionView: AutoSuggestionCollectionView!
+    
+    private var words = ["Swift", "Kotlin", "Java", "Objective-C", "PHP", "Go", "Node.js", "Phyton", "Scala", "Pearl", "C++", "C#", "C"];
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        collectionView.setupWithWords(words: words)
+        collectionView.selectionDelegate = self
+        textfield.inputAccessoryView = self.collectionView
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func didChangeText(_ sender: UITextView) {
+        if sender.text.count > 0 {
+            collectionView.filterWordsWith(text: sender.text)
+        }
+        
+        if sender.text == nil ||  sender.text.count == 0 {
+            collectionView.resetFiltering()
+        }
+        
+        textfield.inputAccessoryView = self.collectionView.needsToBevisible ?  self.collectionView : nil
+        textfield.reloadInputViews()
     }
-
-
 }
+
+extension ViewController: AutoSuggestionCollectionViewDelegate {
+    
+    func autoSuggestionCollectionViewDidSelect(word: String, sender: AutoSuggestionCollectionView) {
+        textfield.text = word
+        textfield.resignFirstResponder()
+        collectionView.resetFiltering()
+    }
+}
+
+
 

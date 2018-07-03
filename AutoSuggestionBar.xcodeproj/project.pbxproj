@@ -14,6 +14,8 @@
 		52599D4F20EB715900769963 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52599D4D20EB715900769963 /* LaunchScreen.storyboard */; };
 		52599D5A20EB715900769963 /* AutoSuggestionBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52599D5920EB715900769963 /* AutoSuggestionBarTests.swift */; };
 		52599D6520EB715900769963 /* AutoSuggestionBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52599D6420EB715900769963 /* AutoSuggestionBarUITests.swift */; };
+		52599D7520EB733C00769963 /* AutoSuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52599D7420EB733C00769963 /* AutoSuggestionCell.swift */; };
+		52599D7720EBAD1200769963 /* AutoSuggestionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52599D7620EBAD1200769963 /* AutoSuggestionCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		52599D6020EB715900769963 /* AutoSuggestionBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoSuggestionBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52599D6420EB715900769963 /* AutoSuggestionBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionBarUITests.swift; sourceTree = "<group>"; };
 		52599D6620EB715900769963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52599D7420EB733C00769963 /* AutoSuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionCell.swift; sourceTree = "<group>"; };
+		52599D7620EBAD1200769963 /* AutoSuggestionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				52599D4B20EB715900769963 /* Assets.xcassets */,
 				52599D4D20EB715900769963 /* LaunchScreen.storyboard */,
 				52599D5020EB715900769963 /* Info.plist */,
+				52599D7420EB733C00769963 /* AutoSuggestionCell.swift */,
+				52599D7620EBAD1200769963 /* AutoSuggestionCollectionView.swift */,
 			);
 			path = AutoSuggestionBar;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				52599D4720EB715700769963 /* ViewController.swift in Sources */,
+				52599D7720EBAD1200769963 /* AutoSuggestionCollectionView.swift in Sources */,
 				52599D4520EB715700769963 /* AppDelegate.swift in Sources */,
+				52599D7520EB733C00769963 /* AutoSuggestionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
